@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\RollerRacer.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RollerRacer.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\RollerRacerEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\RollerRacer">
+      <UniqueIdentifier>{78A5A29E-630B-396E-B939-79621CB15F8B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RollerRacer\RollerRacer.Build.cs">
+      <Filter>Source\RollerRacer</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\RollerRacer\RollerRacer.cpp">
+      <Filter>Source\RollerRacer</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RollerRacer\RollerRacer.h">
+      <Filter>Source\RollerRacer</Filter>
+    </ClInclude>
+    <Filter Include="Source\RollerRacer\C++">
+      <UniqueIdentifier>{184FAB4D-613F-338F-B9B9-E3B90F622B49}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\CheckForPlayerOnTrack.cpp">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RollerRacer\C++\CheckForPlayerOnTrack.h">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\RollerRacerPawn.cpp">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RollerRacer\C++\RollerRacerPawn.h">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\RollerRacerPlayerController.cpp">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RollerRacer\C++\RollerRacerPlayerController.h">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\SphereTrace.cpp">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RollerRacer\C++\SphereTrace.h">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

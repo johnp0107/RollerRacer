@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\johnp\\documents\\unreal projects\\rollerracer\\intermediate\\build\\win64\\unrealeditor\\inc\\rollerracer\\uht\\rollerracerpawn.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\johnp\\documents\\unreal projects\\rollerracer\\intermediate\\build\\win64\\x64\\rollerracereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\johnp\\documents\\unreal projects\\rollerracer\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rollerracer\\definitions.rollerracer.h",
+            "c:\\users\\johnp\\documents\\unreal projects\\rollerracer\\source\\rollerracer\\c++\\rollerracerpawn.h",
+            "c:\\users\\johnp\\documents\\unreal projects\\rollerracer\\intermediate\\build\\win64\\unrealeditor\\inc\\rollerracer\\uht\\rollerracerpawn.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

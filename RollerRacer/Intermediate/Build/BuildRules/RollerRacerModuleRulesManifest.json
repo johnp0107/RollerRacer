@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\johnp\\Documents\\Unreal Projects\\RollerRacer\\Source\\RollerRacer\\RollerRacer.Build.cs",
+		"C:\\Users\\johnp\\Documents\\Unreal Projects\\RollerRacer\\Source\\RollerRacer.Target.cs",
+		"C:\\Users\\johnp\\Documents\\Unreal Projects\\RollerRacer\\Source\\RollerRacerEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}
