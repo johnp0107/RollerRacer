@@ -1,11 +1,13 @@
-"C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\UnrealEditor\Inc\RollerRacer\UHT\RollerRacerPlayerController.gen.cpp"
-/FI"C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\x64\RollerRacerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\Definitions.RollerRacer.h"
-/Yu"C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\x64\RollerRacerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\x64\RollerRacerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\RollerRacerPlayerController.gen.cpp.obj"
-/sourceDependencies "C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\RollerRacerPlayerController.gen.cpp.dep.json"
-@"C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\RollerRacer.Shared.rsp"
+"C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\UnrealEditor\Inc\RollerRacer\UHT\RollerRacerPlayerController.gen.cpp"
+/FI"C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\RollerRacerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_4.h"
+/FI"C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\Definitions.RollerRacer.h"
+/Yu"C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\RollerRacerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_4.h"
+/Fp"C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\RollerRacerEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_4.h.pch"
+/Fo"C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\RollerRacerPlayerController.gen.cpp.obj"
+/experimental:log "C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\RollerRacerPlayerController.gen.cpp.sarif"
+/sourceDependencies "C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\RollerRacerPlayerController.gen.cpp.dep.json"
+@"C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\Win64\x64\UnrealEditor\Development\RollerRacer\RollerRacer.Shared.rsp"
+/d2ssa-cfg-question-
 /Zc:inline
 /nologo
 /Oi

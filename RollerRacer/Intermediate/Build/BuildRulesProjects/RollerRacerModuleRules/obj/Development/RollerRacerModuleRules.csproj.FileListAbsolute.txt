@@ -1,44 +1,45 @@
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2corelinux64.so.9
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2corelinuxarm32.so.9
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2corelinuxarm64.so.9
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2coremac64.2.9.10.dylib
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\oo2core_9_win64.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\oo2core_9_win32.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\oo2core_9_winuwparm64.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\runtimes\win-x64\native\UbaHost.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\runtimes\win-x64\native\UbaDetours.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\RollerRacerModuleRules.deps.json
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\RollerRacerModuleRules.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\ref\RollerRacerModuleRules.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\RollerRacerModuleRules.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Core.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Horde.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.IoHash.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.MsBuild.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.OIDC.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Oodle.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Serialization.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UBA.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UHT.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Core.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Horde.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Horde.xml
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.IoHash.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.MsBuild.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.OIDC.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Oodle.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Oodle.xml
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Serialization.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UBA.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UBA.xml
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UHT.pdb
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UHT.xml
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.csproj.AssemblyReference.cache
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.AssemblyInfoInputs.cache
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.AssemblyInfo.cs
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.csproj.CoreCompileInputs.cache
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRa.C6BA5E8C.Up2Date
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\refint\RollerRacerModuleRules.dll
-C:\Users\johnp\Documents\Unreal Projects\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2corelinux64.so.9
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2corelinuxarm32.so.9
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2corelinuxarm64.so.9
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\liboo2coremac64.2.9.10.dylib
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\oo2core_9_win64.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\oo2core_9_win32.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\oo2core_9_winuwparm64.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\runtimes\win-x64\native\UbaHost.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\runtimes\win-x64\native\UbaDetours.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\RollerRacerModuleRules.deps.json
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\RollerRacerModuleRules.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\ref\RollerRacerModuleRules.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\RollerRacerModuleRules.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Core.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Horde.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.IoHash.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.MsBuild.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.OIDC.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Oodle.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Serialization.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UBA.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UHT.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Core.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Horde.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Horde.xml
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.IoHash.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.MsBuild.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.OIDC.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Oodle.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Oodle.xml
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.Serialization.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UBA.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UBA.xml
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UHT.pdb
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\bin\Development\EpicGames.UHT.xml
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.csproj.AssemblyReference.cache
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.AssemblyInfoInputs.cache
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.AssemblyInfo.cs
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.csproj.CoreCompileInputs.cache
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.sourcelink.json
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRa.C6BA5E8C.Up2Date
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\refint\RollerRacerModuleRules.dll
+C:\Users\johnp\Documents\GitHub\RollerRacer\RollerRacer\Intermediate\Build\BuildRulesProjects\RollerRacerModuleRules\obj\Development\RollerRacerModuleRules.pdb

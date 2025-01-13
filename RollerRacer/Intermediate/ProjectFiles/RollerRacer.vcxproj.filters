@@ -12,6 +12,9 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\Track.blend" />
+    <None Include="..\..\Track1.fbx" />
+    <None Include="..\..\Track2.fbx" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -36,35 +39,47 @@
     <ClCompile Include="..\..\Source\RollerRacer\RollerRacer.cpp">
       <Filter>Source\RollerRacer</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\RollerRacer\RollerRacer.h">
+    <ClCompile Include="..\..\Source\RollerRacer\RollerRacer.h">
       <Filter>Source\RollerRacer</Filter>
-    </ClInclude>
+    </ClCompile>
     <Filter Include="Source\RollerRacer\C++">
       <UniqueIdentifier>{184FAB4D-613F-338F-B9B9-E3B90F622B49}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RollerRacer\C++\CheckForPlayerOnTrack.cpp">
       <Filter>Source\RollerRacer\C++</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\RollerRacer\C++\CheckForPlayerOnTrack.h">
+    <ClCompile Include="..\..\Source\RollerRacer\C++\CheckForPlayerOnTrack.h">
       <Filter>Source\RollerRacer\C++</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\RollerRacer\C++\RollerRacerPawn.cpp">
       <Filter>Source\RollerRacer\C++</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\RollerRacer\C++\RollerRacerPawn.h">
+    <ClCompile Include="..\..\Source\RollerRacer\C++\RollerRacerPawn.h">
       <Filter>Source\RollerRacer\C++</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\RollerRacer\C++\RollerRacerPlayerController.cpp">
       <Filter>Source\RollerRacer\C++</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\RollerRacer\C++\RollerRacerPlayerController.h">
+    <ClCompile Include="..\..\Source\RollerRacer\C++\RollerRacerPlayerController.h">
       <Filter>Source\RollerRacer\C++</Filter>
-    </ClInclude>
+    </ClCompile>
     <ClCompile Include="..\..\Source\RollerRacer\C++\SphereTrace.cpp">
       <Filter>Source\RollerRacer\C++</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\RollerRacer\C++\SphereTrace.h">
+    <ClCompile Include="..\..\Source\RollerRacer\C++\SphereTrace.h">
       <Filter>Source\RollerRacer\C++</Filter>
-    </ClInclude>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\SplineTrack.cpp">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\SplineTrack.h">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\SplineTrackRoll.cpp">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RollerRacer\C++\SplineTrackRoll.h">
+      <Filter>Source\RollerRacer\C++</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

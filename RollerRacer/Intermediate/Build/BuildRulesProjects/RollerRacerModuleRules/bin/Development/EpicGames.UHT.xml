@@ -28,11 +28,11 @@
             <param name="registered">If true, return the registered external declaration.  Otherwise return the unregistered.</param>
             <returns>External declaration</returns>
         </member>
-        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator.GetSortedHeaderFiles(EpicGames.UHT.Types.UhtPackage)">
+        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator.GetSortedHeaderFiles(EpicGames.UHT.Types.UhtModule)">
             <summary>
-            Return a package's sorted header file list of all header files that or referenced or have declarations.
+            Return a module's sorted header file list of all header files that or referenced or have declarations.
             </summary>
-            <param name="package">The package in question</param>
+            <param name="module">The module in question</param>
             <returns>Sorted list of the header files</returns>
         </member>
         <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtHeaderCodeGenerator.ShouldExportFunction(EpicGames.UHT.Types.UhtFunction)">
@@ -63,12 +63,16 @@
             <param name="classObj">Class in question</param>
             <returns>Enumeration of structs</returns>
         </member>
-        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtHeaderCodeGeneratorCppFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtPackage,EpicGames.UHT.Types.UhtHeaderFile)">
+        <member name="T:EpicGames.UHT.Exporters.CodeGen.UhtRegistrations">
+            <summary>
+            Collection of all registrations for a specific package
+            </summary>
+        </member>
+        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtHeaderCodeGeneratorCppFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtHeaderFile)">
             <summary>
             Construct an instance of this generator object
             </summary>
             <param name="codeGenerator">The base code generator</param>
-            <param name="package">Package being generated</param>
             <param name="headerFile">Header file being generated</param>
         </member>
         <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtHeaderCodeGeneratorCppFile.Generate(EpicGames.UHT.Utils.IUhtExportFactory)">
@@ -90,12 +94,11 @@
             <param name="function">Function in question</param>
             <returns>Destination builder</returns>
         </member>
-        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtHeaderCodeGeneratorHFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtPackage,EpicGames.UHT.Types.UhtHeaderFile)">
+        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtHeaderCodeGeneratorHFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtHeaderFile)">
             <summary>
             Construct an instance of this generator object
             </summary>
             <param name="codeGenerator">The base code generator</param>
-            <param name="package">Package being generated</param>
             <param name="headerFile">Header file being generated</param>
         </member>
         <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtHeaderCodeGeneratorHFile.Generate(EpicGames.UHT.Utils.IUhtExportFactory)">
@@ -262,12 +265,12 @@
             <param name="tabs">Number of tabs to indent</param>
             <returns>Destination builder</returns>
         </member>
-        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtPackageCodeGeneratorCppFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtPackage)">
+        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtPackageCodeGeneratorCppFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtModule)">
             <summary>
             Construct an instance of this generator object
             </summary>
             <param name="codeGenerator">The base code generator</param>
-            <param name="package">Package being generated</param>
+            <param name="module">Module being generated</param>
         </member>
         <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtPackageCodeGeneratorCppFile.Generate(EpicGames.UHT.Utils.IUhtExportFactory,System.Collections.Generic.List{EpicGames.UHT.Types.UhtHeaderFile})">
             <summary>
@@ -276,19 +279,19 @@
             <param name="factory">Requesting factory</param>
             <param name="packageSortedHeaders">Sorted list of headers by name of all headers in the package</param>
         </member>
-        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtPackageCodeGeneratorHFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtPackage)">
+        <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtPackageCodeGeneratorHFile.#ctor(EpicGames.UHT.Exporters.CodeGen.UhtCodeGenerator,EpicGames.UHT.Types.UhtModule)">
             <summary>
             Construct an instance of this generator object
             </summary>
             <param name="codeGenerator">The base code generator</param>
-            <param name="package">Package being generated</param>
+            <param name="module">Module being generated</param>
         </member>
         <member name="M:EpicGames.UHT.Exporters.CodeGen.UhtPackageCodeGeneratorHFile.Generate(EpicGames.UHT.Utils.IUhtExportFactory,System.Collections.Generic.List{EpicGames.UHT.Types.UhtHeaderFile})">
             <summary>
             For a given UE header file, generated the generated H file
             </summary>
             <param name="factory">Requesting factory</param>
-            <param name="packageSortedHeaders">Sorted list of headers by name of all headers in the package</param>
+            <param name="moduleSortedHeaders">Sorted list of headers by name of all headers in the module</param>
         </member>
         <member name="T:EpicGames.UHT.Exporters.CodeGen.UhtUsedDefineScopes`1">
             <summary>
@@ -776,14 +779,14 @@
             Header file being parsed
             </summary>
         </member>
+        <member name="P:EpicGames.UHT.Parsers.UhtHeaderFileParser.Module">
+            <summary>
+            Module containing the header file
+            </summary>
+        </member>
         <member name="P:EpicGames.UHT.Parsers.UhtHeaderFileParser.TokenReader">
             <summary>
             Token reader for the header
-            </summary>
-        </member>
-        <member name="P:EpicGames.UHT.Parsers.UhtHeaderFileParser.IsPartOfEngine">
-            <summary>
-            If true, this header file belongs to the engine
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Parsers.UhtHeaderFileParser.SpottedAutogeneratedHeaderInclude">
@@ -965,6 +968,16 @@
             Header file parser
             </summary>
         </member>
+        <member name="P:EpicGames.UHT.Parsers.UhtParsingScope.HeaderFile">
+            <summary>
+            Header file being parsed
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Parsers.UhtParsingScope.Module">
+            <summary>
+            Module owning the header file
+            </summary>
+        </member>
         <member name="P:EpicGames.UHT.Parsers.UhtParsingScope.TokenReader">
             <summary>
             Token reader
@@ -977,7 +990,7 @@
         </member>
         <member name="P:EpicGames.UHT.Parsers.UhtParsingScope.ScopeType">
             <summary>
-            Type being parsed
+            Type being parsed.
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Parsers.UhtParsingScope.ScopeKeywordTable">
@@ -1000,17 +1013,11 @@
             Return the current class scope being compiled
             </summary>
         </member>
-        <member name="P:EpicGames.UHT.Parsers.UhtParsingScope.CurrentClass">
-            <summary>
-            Return the current class being compiled
-            </summary>
-        </member>
-        <member name="M:EpicGames.UHT.Parsers.UhtParsingScope.#ctor(EpicGames.UHT.Parsers.UhtHeaderFileParser,EpicGames.UHT.Types.UhtType,EpicGames.UHT.Tables.UhtKeywordTable)">
+        <member name="M:EpicGames.UHT.Parsers.UhtParsingScope.#ctor(EpicGames.UHT.Parsers.UhtHeaderFileParser,EpicGames.UHT.Tables.UhtKeywordTable)">
             <summary>
             Construct a root/global scope
             </summary>
             <param name="headerParser">Header parser</param>
-            <param name="scopeType">Type being parsed</param>
             <param name="keywordTable">Keyword table</param>
         </member>
         <member name="M:EpicGames.UHT.Parsers.UhtParsingScope.#ctor(EpicGames.UHT.Parsers.UhtParsingScope,EpicGames.UHT.Types.UhtType,EpicGames.UHT.Tables.UhtKeywordTable,EpicGames.UHT.Types.UhtAccessSpecifier)">
@@ -1586,6 +1593,11 @@
             Collection of UENUM specifiers
             </summary>
         </member>
+        <member name="T:EpicGames.UHT.Parsers.UhtFieldSpecifiers">
+            <summary>
+            Collection of UENUM specifiers
+            </summary>
+        </member>
         <member name="T:EpicGames.UHT.Parsers.UhtFunctionSpecifiers">
             <summary>
             Collection of UFUNCTION/UDELEGATE specifiers
@@ -1678,6 +1690,14 @@
         <member name="F:EpicGames.UHT.Tables.UhtExporterOptions.Default">
             <summary>
             The exporter should be run by default
+            </summary>
+        </member>
+        <member name="F:EpicGames.UHT.Tables.UhtExporterOptions.CompileOutput">
+            <summary>
+            Generated CPP files that match any filter in the CppFilters property of this UhtExporter will be included in the compilation process.
+            For this option, all custom generated files should be placed into the same folder as the default unreal generated files.
+            Make sure the CppFilters property is set up properly and does not conflict with other exporters (including the default).
+            Header files should be included as normal in code.
             </summary>
         </member>
         <member name="T:EpicGames.UHT.Tables.UhtExporterOptionsExtensions">
@@ -4556,6 +4576,47 @@
         <member name="P:EpicGames.UHT.Tokenizer.UhtTokenReplayReader.RecordedTokens">
             <inheritdoc/>
         </member>
+        <member name="T:EpicGames.UHT.Types.UhtAnsiStrProperty">
+            <summary>
+            FAnsiStrProperty
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtAnsiStrProperty.EngineClassName">
+            <inheritdoc/>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtAnsiStrProperty.CppTypeText">
+            <inheritdoc/>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtAnsiStrProperty.PGetMacroText">
+            <inheritdoc/>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtAnsiStrProperty.PGetTypeArgument">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtAnsiStrProperty.#ctor(EpicGames.UHT.Types.UhtPropertySettings)">
+            <summary>
+            Construct a new property
+            </summary>
+            <param name="propertySettings">Property settings</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtAnsiStrProperty.AppendNullConstructorArg(System.Text.StringBuilder,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtAnsiStrProperty.AppendMemberDecl(System.Text.StringBuilder,EpicGames.UHT.Types.IUhtPropertyMemberContext,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtAnsiStrProperty.AppendMemberDef(System.Text.StringBuilder,EpicGames.UHT.Types.IUhtPropertyMemberContext,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtAnsiStrProperty.SanitizeDefaultValue(EpicGames.UHT.Tokenizer.IUhtTokenReader,System.Text.StringBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtAnsiStrProperty.IsSameType(EpicGames.UHT.Types.UhtProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtAnsiStrProperty.ValidateFunctionArgument(EpicGames.UHT.Types.UhtFunction,EpicGames.UHT.Types.UhtValidationOptions)">
+            <inheritdoc/>
+        </member>
         <member name="T:EpicGames.UHT.Types.UhtArrayProperty">
             <summary>
             Represents the FArrayProperty engine type
@@ -4677,6 +4738,11 @@
         <member name="P:EpicGames.UHT.Types.UhtBoolProperty.BoolType">
             <summary>
             Type of the boolean
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtBoolProperty.StrippedEngineName">
+            <summary>
+            Return the engine name without and 'b' prefixes
             </summary>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtBoolProperty.#ctor(EpicGames.UHT.Types.UhtPropertySettings,EpicGames.UHT.Types.UhtBoolType)">
@@ -5315,7 +5381,7 @@
         <member name="M:EpicGames.UHT.Types.UhtInterfaceProperty.SanitizeDefaultValue(EpicGames.UHT.Tokenizer.IUhtTokenReader,System.Text.StringBuilder)">
             <inheritdoc/>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtInterfaceProperty.ValidateMember(EpicGames.UHT.Types.UhtStruct,EpicGames.UHT.Types.UhtValidationOptions)">
+        <member name="M:EpicGames.UHT.Types.UhtInterfaceProperty.Validate(EpicGames.UHT.Types.UhtStruct,EpicGames.UHT.Types.UhtProperty,EpicGames.UHT.Types.UhtValidationOptions)">
             <inheritdoc/>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtInterfaceProperty.IsSameType(EpicGames.UHT.Types.UhtProperty)">
@@ -6359,9 +6425,50 @@
         <member name="M:EpicGames.UHT.Types.UhtUInt64Property.IsSameType(EpicGames.UHT.Types.UhtProperty)">
             <inheritdoc/>
         </member>
+        <member name="T:EpicGames.UHT.Types.UhtUtf8StrProperty">
+            <summary>
+            FUtf8StrProperty
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtUtf8StrProperty.EngineClassName">
+            <inheritdoc/>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtUtf8StrProperty.CppTypeText">
+            <inheritdoc/>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtUtf8StrProperty.PGetMacroText">
+            <inheritdoc/>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtUtf8StrProperty.PGetTypeArgument">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtUtf8StrProperty.#ctor(EpicGames.UHT.Types.UhtPropertySettings)">
+            <summary>
+            Construct a new property
+            </summary>
+            <param name="propertySettings">Property settings</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtUtf8StrProperty.AppendNullConstructorArg(System.Text.StringBuilder,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtUtf8StrProperty.AppendMemberDecl(System.Text.StringBuilder,EpicGames.UHT.Types.IUhtPropertyMemberContext,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtUtf8StrProperty.AppendMemberDef(System.Text.StringBuilder,EpicGames.UHT.Types.IUhtPropertyMemberContext,System.String,System.String,System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtUtf8StrProperty.SanitizeDefaultValue(EpicGames.UHT.Tokenizer.IUhtTokenReader,System.Text.StringBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtUtf8StrProperty.IsSameType(EpicGames.UHT.Types.UhtProperty)">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtUtf8StrProperty.ValidateFunctionArgument(EpicGames.UHT.Types.UhtFunction,EpicGames.UHT.Types.UhtValidationOptions)">
+            <inheritdoc/>
+        </member>
         <member name="T:EpicGames.UHT.Types.UhtVerseValueProperty">
             <summary>
-            FStrProperty
+            FVValueProperty
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtVerseValueProperty.EngineClassName">
@@ -6870,10 +6977,11 @@
             The super class
             </summary>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtClass.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
+        <member name="M:EpicGames.UHT.Types.UhtClass.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32)">
             <summary>
             Construct a new instance of the class
             </summary>
+            <param name="headerFile">Header being parsed</param>
             <param name="outer">The outer type</param>
             <param name="lineNumber">Line number where class begins</param>
         </member>
@@ -7100,10 +7208,11 @@
         <member name="P:EpicGames.UHT.Types.UhtEnum.SpecifierValidatorTable">
             <inheritdoc/>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtEnum.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
+        <member name="M:EpicGames.UHT.Types.UhtEnum.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32)">
             <summary>
             Construct a new enumeration
             </summary>
+            <param name="headerFile">Header being parsed</param>
             <param name="outer">Outer type</param>
             <param name="lineNumber">Line number of declaration</param>
         </member>
@@ -7167,12 +7276,73 @@
         <member name="P:EpicGames.UHT.Types.UhtField.EngineClassName">
             <inheritdoc/>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtField.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
+        <member name="P:EpicGames.UHT.Types.UhtField.VerseModule">
+            <summary>
+            Name of the module containing the type
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtField.VerseName">
+            <summary>
+            Cased name of the verse field
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtField.IsVerseField">
+            <summary>
+            Returns true if field is a verse element
+            </summary>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtField.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32)">
             <summary>
             Construct a new field
             </summary>
+            <param name="headerFile">Header file being parsed</param>
             <param name="outer">Outer object</param>
             <param name="lineNumber">Line number of declaration</param>
+        </member>
+        <member name="T:EpicGames.UHT.Types.UhtFieldStringBuilderExtensions">
+            <summary>
+            Helper extension methods for fields
+            </summary>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtFieldStringBuilderExtensions.AppendVerseUEVNIPackageName(System.Text.StringBuilder,EpicGames.UHT.Types.UhtField)">
+            <summary>
+            Append the Verse UE VNI package name
+            </summary>
+            <param name="builder">Destination builder</param>
+            <param name="fieldObj">Field to serialize</param>
+            <returns>Builder</returns>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtFieldStringBuilderExtensions.AppendVerseUEName(System.Text.StringBuilder,EpicGames.UHT.Types.UhtField)">
+            <summary>
+            Append the Verse UE name 
+            </summary>
+            <param name="builder">Destination builder</param>
+            <param name="fieldObj">Field to serialize</param>
+            <returns>Builder</returns>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtFieldStringBuilderExtensions.AppendVerseUEModuleAndName(System.Text.StringBuilder,EpicGames.UHT.Types.UhtField)">
+            <summary>
+            Append the Verse UE name 
+            </summary>
+            <param name="builder">Destination builder</param>
+            <param name="fieldObj">Field to serialize</param>
+            <returns>Builder</returns>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtFieldStringBuilderExtensions.AppendVersePackageName(System.Text.StringBuilder,EpicGames.UHT.Types.UhtField)">
+            <summary>
+            Append the Verse package name
+            </summary>
+            <param name="builder">Destination builder</param>
+            <param name="fieldObj">Field to serialize</param>
+            <returns>Builder</returns>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtFieldStringBuilderExtensions.AppendVerseModuleName(System.Text.StringBuilder,EpicGames.UHT.Types.UhtField)">
+            <summary>
+            Append the Verse module name
+            </summary>
+            <param name="builder">Destination builder</param>
+            <param name="fieldObj">Field to serialize</param>
+            <returns>Builder</returns>
         </member>
         <member name="T:EpicGames.UHT.Types.UhtFunctionExportFlags">
             <summary>
@@ -7461,10 +7631,11 @@
             True if the function has any outputs including a return value
             </summary>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtFunction.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
+        <member name="M:EpicGames.UHT.Types.UhtFunction.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32)">
             <summary>
             Construct a new instance of a function
             </summary>
+            <param name="headerFile">Header being parsed</param>
             <param name="outer">The parent object</param>
             <param name="lineNumber">The line number where the function is defined</param>
         </member>
@@ -7584,10 +7755,24 @@
             <param name="matchFlags">Expected value of the tested flags</param>
             <returns>True if the given flags have a specific value.</returns>
         </member>
+        <member name="T:EpicGames.UHT.Types.UhtHeaderReferenceType">
+            <summary>
+            Type of reference being added
+            </summary>
+        </member>
+        <member name="F:EpicGames.UHT.Types.UhtHeaderReferenceType.Include">
+            <summary>
+            The header being referenced in a direct include
+            </summary>
+        </member>
+        <member name="F:EpicGames.UHT.Types.UhtHeaderReferenceType.Passive">
+            <summary>
+            The header being referenced is a passive reference (i.e. NoExportTypes.h or a header referenced by a header being included)
+            </summary>
+        </member>
         <member name="T:EpicGames.UHT.Types.UhtHeaderFile">
             <summary>
-            Represents a header file.  Unlike the engine, UhtHeader files will appear as a child 
-            of a UhtPackage and the outer of all global types found in that header.
+            Represents a header file.
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtHeaderFile.Data">
@@ -7598,6 +7783,16 @@
         <member name="P:EpicGames.UHT.Types.UhtHeaderFile.FilePath">
             <summary>
             Path of the header
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.Session">
+            <summary>
+            Currently running session
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.Module">
+            <summary>
+            Module associated with the header
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtHeaderFile.FileNameWithoutExtension">
@@ -7640,6 +7835,14 @@
             UHT flags for the header
             </summary>
         </member>
+        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.Children">
+            <summary>
+            Children types of this type
+            </summary>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.ToString">
+            <inheritdoc/>
+        </member>
         <member name="P:EpicGames.UHT.Types.UhtHeaderFile.ShouldExport">
             <summary>
             If true, the header file should be exported
@@ -7649,18 +7852,6 @@
             <summary>
             Resource collector for the header file
             </summary>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.Package">
-            <inheritdoc/>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.HeaderFile">
-            <inheritdoc/>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.EngineType">
-            <inheritdoc/>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.EngineClassName">
-            <inheritdoc/>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtHeaderFile.IncludedHeaders">
             <summary>
@@ -7673,11 +7864,14 @@
         <member name="P:EpicGames.UHT.Types.UhtHeaderFile.MessageSource">
             <inheritdoc/>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.#ctor(EpicGames.UHT.Types.UhtPackage,System.String)">
+        <member name="P:EpicGames.UHT.Types.UhtHeaderFile.MessageLineNumber">
+            <inheritdoc/>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.#ctor(EpicGames.UHT.Types.UhtModule,System.String)">
             <summary>
             Construct a new header file
             </summary>
-            <param name="package">Owning package</param>
+            <param name="module">Owning module</param>
             <param name="path">Path to the header file</param>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtHeaderFile.Read">
@@ -7685,12 +7879,12 @@
             Read the contents of the header
             </summary>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.AddReferencedHeader(System.String,System.Boolean)">
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.AddReferencedHeader(System.String,EpicGames.UHT.Types.UhtHeaderReferenceType)">
             <summary>
             Add a reference to the given header
             </summary>
             <param name="id">Path of the header</param>
-            <param name="isIncludedFile">True if this is a directly included file</param>
+            <param name="referenceType">How is the include in question referenced</param>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtHeaderFile.AddReferencedHeader(EpicGames.UHT.Types.UhtType)">
             <summary>
@@ -7698,12 +7892,12 @@
             </summary>
             <param name="type">Type in question</param>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.AddReferencedHeader(EpicGames.UHT.Types.UhtHeaderFile,System.Boolean)">
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.AddReferencedHeader(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtHeaderReferenceType)">
             <summary>
             Add a reference to the given header file
             </summary>
             <param name="headerFile">Header file in question</param>
-            <param name="isIncludedFile">True if this is a directly included file</param>
+            <param name="referenceType">How is the include in question referenced</param>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtHeaderFile.ReferencedHeadersNoLock">
             <summary>
@@ -7715,11 +7909,34 @@
             Return an enumerator of all current referenced headers under a lock.  This should be used during parsing.
             </summary>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.AppendPathName(System.Text.StringBuilder,EpicGames.UHT.Types.UhtType)">
-            <inheritdoc/>
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.AddChild(EpicGames.UHT.Types.UhtType)">
+            <summary>
+            Add a type as a child
+            </summary>
+            <param name="child">The child to be added.</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.Resolve(EpicGames.UHT.Types.UhtResolvePhase)">
+            <summary>
+            Resolve all types owned by the header
+            </summary>
+            <param name="resolvePhase">Phase of the resolution process</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.BindSuperAndBases">
+            <summary>
+            Bind all the super structs and base classes
+            </summary>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtHeaderFile.Validate(EpicGames.UHT.Types.UhtValidationOptions)">
-            <inheritdoc/>
+            <summary>
+            Validate the state of the header file
+            </summary>
+            <param name="options">Validation options</param>
+            <returns></returns>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtHeaderFile.CollectReferences">
+            <summary>
+            Collect all things referenced by the given header
+            </summary>
         </member>
         <member name="T:EpicGames.UHT.Types.UhtManifestFile">
             <summary>
@@ -8103,6 +8320,97 @@
             </summary>
             <returns>List of meta data key and value pairs</returns>
         </member>
+        <member name="T:EpicGames.UHT.Types.UhtModule">
+            <summary>
+            Represents a UHT module
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.Session">
+            <summary>
+            The running session
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.Module">
+            <summary>
+            UHT module from UBT (1 to 1 relationship)
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.ScriptPackage">
+            <summary>
+            Primary /Script/ package
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.ShortName">
+            <summary>
+            Name of the module based on the script package name with out the "/Script/" prefix
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.Api">
+            <summary>
+            C++ API name for the module with a trailing space
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.Packages">
+            <summary>
+            Enumeration of all the packages in the module.
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.Headers">
+            <summary>
+            Collection of headers owned by the module
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.IsPartOfEngine">
+            <summary>
+            True if the package is part of the engine
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtModule.IsPlugin">
+            <summary>
+            True if the package is a plugin
+            </summary>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtModule.#ctor(EpicGames.UHT.Utils.UhtSession,EpicGames.Core.UHTManifest.Module)">
+            <summary>
+            Create a new module from the given manifest module
+            </summary>
+            <param name="session">Running session</param>
+            <param name="module">Source module from UBT</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtModule.PrepareHeaders(System.Action{EpicGames.UHT.Types.UhtHeaderFile})">
+            <summary>
+            Prepare to parse all the headers in the module.  This creates all the UhtHeaderFiles and validates there
+            are no conflicts.
+            </summary>
+            <param name="addHeaderFileAction">Action to invoke to register the headers with the session</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtModule.CreatePackage(System.String,EpicGames.Core.EPackageFlags)">
+            <summary>
+            Create a new package with the given name.  Will return an existing instance if it already exists
+            </summary>
+            <param name="packageName">Name of the package</param>
+            <param name="packageFlags">Flags to set if the package is created</param>
+            <returns>Package</returns>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtModule.PrepareHeaders(System.Collections.Generic.IEnumerable{System.String},EpicGames.UHT.Types.UhtHeaderFileType,System.Action{EpicGames.UHT.Types.UhtHeaderFile})">
+            <summary>
+            Given a collection of headers, create the UhtHeaders
+            </summary>
+            <param name="headerFiles">Collection of header names</param>
+            <param name="headerFileType">Type of the headers</param>
+            <param name="addHeaderFileAction">Action to take to notify the caller of the header being created</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtModule.GetNormalizedFullFilePath(System.String)">
+            <summary>
+            Return the normalized path converted to a full path if possible. 
+            Code should NOT depend on a full path being returned.
+            
+            In general, it is assumed that during normal UHT, all paths are already full paths.
+            Only the test harness deals in relative paths.
+            </summary>
+            <param name="filePath">Path to normalize</param>
+            <returns>Normalized path possibly converted to a full path.</returns>
+        </member>
         <member name="T:EpicGames.UHT.Types.UhtObject">
             <summary>
             Represents a UObject in the engine
@@ -8127,16 +8435,17 @@
         <member name="P:EpicGames.UHT.Types.UhtObject.EngineClassName">
             <inheritdoc/>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtObject.#ctor(EpicGames.UHT.Utils.UhtSession)">
+        <member name="M:EpicGames.UHT.Types.UhtObject.#ctor(EpicGames.UHT.Types.UhtModule)">
             <summary>
             Construct a new instance of the object
             </summary>
-            <param name="session">Session of the object</param>
+            <param name="module">Owning module</param>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtObject.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
+        <member name="M:EpicGames.UHT.Types.UhtObject.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32)">
             <summary>
             Construct a new instance of the object
             </summary>
+            <param name="headerFile">Header file being compiled</param>
             <param name="outer">Outer object</param>
             <param name="lineNumber">Line number where object is defined</param>
         </member>
@@ -8155,11 +8464,6 @@
             Engine package flags
             </summary>
         </member>
-        <member name="P:EpicGames.UHT.Types.UhtPackage.Module">
-            <summary>
-            UHT module of the package (1 to 1 relationship)
-            </summary>
-        </member>
         <member name="P:EpicGames.UHT.Types.UhtPackage.EngineType">
             <inheritdoc/>
         </member>
@@ -8169,31 +8473,16 @@
         <member name="P:EpicGames.UHT.Types.UhtPackage.Package">
             <inheritdoc/>
         </member>
-        <member name="P:EpicGames.UHT.Types.UhtPackage.HeaderFile">
-            <inheritdoc/>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtPackage.IsPartOfEngine">
-            <summary>
-            True if the package is part of the engine
-            </summary>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtPackage.IsPlugin">
-            <summary>
-            True if the package is a plugin
-            </summary>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtPackage.ShortName">
-            <summary>
-            Short name of the package (without the /Script/)
-            </summary>
-        </member>
-        <member name="M:EpicGames.UHT.Types.UhtPackage.#ctor(EpicGames.UHT.Utils.UhtSession,EpicGames.Core.UHTManifest.Module,EpicGames.Core.EPackageFlags)">
+        <member name="M:EpicGames.UHT.Types.UhtPackage.#ctor(EpicGames.UHT.Types.UhtModule,System.String,EpicGames.Core.EPackageFlags)">
             <summary>
             Construct a new instance of a package
             </summary>
-            <param name="session">Running session</param>
             <param name="module">Source module of the package</param>
+            <param name="packageName">Name of the package</param>
             <param name="packageFlags">Assorted package flags</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtPackage.AddChild(EpicGames.UHT.Types.UhtType)">
+            <inheritdoc/>
         </member>
         <member name="T:EpicGames.UHT.Types.UhtPropertyExportFlags">
             <summary>
@@ -8737,6 +9026,16 @@
             Property settings is a transient object used during the parsing of properties
             </summary>
         </member>
+        <member name="P:EpicGames.UHT.Types.UhtPropertySettings.ParentSettings">
+            <summary>
+            For nested properties, this points to the parent
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtPropertySettings.RootSettings">
+            <summary>
+            The root settings for a nested property
+            </summary>
+        </member>
         <member name="P:EpicGames.UHT.Types.UhtPropertySettings.SourceName">
             <summary>
             Source name of the property
@@ -8745,6 +9044,11 @@
         <member name="P:EpicGames.UHT.Types.UhtPropertySettings.EngineName">
             <summary>
             Engine name of the property
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtPropertySettings.VerseName">
+            <summary>
+            Verse name of the property 
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtPropertySettings.MetaData">
@@ -8907,6 +9211,11 @@
             Type of the PGet argument if one is required
             </summary>
         </member>
+        <member name="P:EpicGames.UHT.Types.UhtProperty.VerseName">
+            <summary>
+            Verse name of the property 
+            </summary>
+        </member>
         <member name="P:EpicGames.UHT.Types.UhtProperty.PropertyCategory">
             <summary>
             Property category
@@ -8983,6 +9292,11 @@
         <member name="P:EpicGames.UHT.Types.UhtProperty.Deprecated">
             <inheritdoc/>
         </member>
+        <member name="P:EpicGames.UHT.Types.UhtProperty.StrippedEngineName">
+            <summary>
+            Return the engine name without and 'b' prefixes
+            </summary>
+        </member>
         <member name="P:EpicGames.UHT.Types.UhtProperty.SpecifierValidatorTable">
             <inheritdoc/>
         </member>
@@ -8994,6 +9308,12 @@
         <member name="P:EpicGames.UHT.Types.UhtProperty.IsEditorOnlyProperty">
             <summary>
             If true, the property is editor only
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtProperty.RootProperty">
+            <summary>
+            Return the root property for the given property.  If the property is outside of a container, 
+            return the property itself.  Otherwise, return the property associated with the container.
             </summary>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtProperty.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
@@ -9168,6 +9488,12 @@
             <param name="builder">Output builder</param>
             <param name="startingLength">Initial length of the builder prior to appending the hashes</param>
             <param name="context">Context used to lookup the hashes</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtProperty.GetMangledEngineName">
+            <summary>
+            Fetch the mangled name for a property
+            </summary>
+            <returns>True if the name needed to be mangled, false if not.</returns>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtProperty.SanitizeDefaultValue(EpicGames.UHT.Tokenizer.IUhtTokenReader,System.Text.StringBuilder)">
             <summary>
@@ -9984,10 +10310,11 @@
             Super struct
             </summary>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtScriptStruct.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
+        <member name="M:EpicGames.UHT.Types.UhtScriptStruct.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32)">
             <summary>
             Construct a new script struct
             </summary>
+            <param name="headerFile">Header being parsed</param>
             <param name="outer">Outer type</param>
             <param name="lineNumber">Line number of the definition</param>
         </member>
@@ -10158,10 +10485,11 @@
             Stack used to test to see if we are recursing in a ScanForInstanceReferenced call
             </summary>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtStruct.#ctor(EpicGames.UHT.Types.UhtType,System.Int32)">
+        <member name="M:EpicGames.UHT.Types.UhtStruct.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32)">
             <summary>
             Construct a new instance
             </summary>
+            <param name="headerFile">Header file being parsed</param>
             <param name="outer">Outer type</param>
             <param name="lineNumber">Line number where definition begins</param>
         </member>
@@ -10216,11 +10544,6 @@
         <member name="T:EpicGames.UHT.Types.UhtEngineType">
             <summary>
             Enumeration for all the different engine types
-            </summary>
-        </member>
-        <member name="F:EpicGames.UHT.Types.UhtEngineType.Header">
-            <summary>
-            Type is a header file (UhtHeader)
             </summary>
         </member>
         <member name="F:EpicGames.UHT.Types.UhtEngineType.Package">
@@ -10727,6 +11050,16 @@
             All UHT runs are associated with a given session.  The session holds all the global information for a run.
             </summary>
         </member>
+        <member name="P:EpicGames.UHT.Types.UhtType.Module">
+            <summary>
+            UHT module of the package (1 to 1 relationship)
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtType.HeaderFile">
+            <summary>
+            The header file containing the type
+            </summary>
+        </member>
         <member name="P:EpicGames.UHT.Types.UhtType.TypeIndex">
             <summary>
             Every type in a session is assigned a unique, non-zero id.
@@ -10740,11 +11073,6 @@
         <member name="P:EpicGames.UHT.Types.UhtType.Package">
             <summary>
             The owning package of the type
-            </summary>
-        </member>
-        <member name="P:EpicGames.UHT.Types.UhtType.HeaderFile">
-            <summary>
-            The header file containing the type
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtType.SourceName">
@@ -10780,6 +11108,11 @@
         <member name="P:EpicGames.UHT.Types.UhtType.DefineScope">
             <summary>
             #define scope where the type was defined
+            </summary>
+        </member>
+        <member name="P:EpicGames.UHT.Types.UhtType.IsValid">
+            <summary>
+            If true, the type has not been marked as invalid.
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Types.UhtType.FullName">
@@ -10827,17 +11160,18 @@
         <member name="P:EpicGames.UHT.Types.UhtType.MessageLineNumber">
             <inheritdoc/>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtType.#ctor(EpicGames.UHT.Utils.UhtSession)">
+        <member name="M:EpicGames.UHT.Types.UhtType.#ctor(EpicGames.UHT.Types.UhtModule)">
             <summary>
             Construct the base type information.  This constructor is used exclusively by UhtPackage which is at 
             the root of all type hierarchies.
             </summary>
-            <param name="session"></param>
+            <param name="module>>"></param>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtType.#ctor(EpicGames.UHT.Types.UhtType,System.Int32,EpicGames.UHT.Types.UhtMetaData)">
+        <member name="M:EpicGames.UHT.Types.UhtType.#ctor(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtType,System.Int32,EpicGames.UHT.Types.UhtMetaData)">
             <summary>
             Construct instance of the type given a parent type.
             </summary>
+            <param name="headerFile">Header file being parsed</param>
             <param name="outer">The outer type of the type being constructed.  For example, a class defined in a given header will have the header as the outer.</param>
             <param name="lineNumber">The line number in the source file where the type was defined.</param>
             <param name="metaData">Optional meta data to be associated with the type.</param>
@@ -10848,18 +11182,17 @@
             </summary>
             <param name="child">The child to be added.</param>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtType.DetachChildren">
+        <member name="M:EpicGames.UHT.Types.UhtType.AddChildDirectly(EpicGames.UHT.Types.UhtType)">
             <summary>
-            Return the list of children attached to the type.  The 
-            list associated with the type is cleared.
+            Non-virtual method that always adds the child directly to the child list
             </summary>
-            <returns>The current list of children</returns>
+            <param name="child">Child to be added</param>
         </member>
-        <member name="M:EpicGames.UHT.Types.UhtType.AddChildren(System.Collections.Generic.List{EpicGames.UHT.Types.UhtType})">
+        <member name="M:EpicGames.UHT.Types.UhtType.MoveChildren(EpicGames.UHT.Types.UhtType)">
             <summary>
-            Merge the list children into the type.  The child's outer is set.
+            Move all children from the given source type to this type
             </summary>
-            <param name="children">List of children to add.</param>
+            <param name="source">Source of the children</param>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtType.Resolve(EpicGames.UHT.Types.UhtResolvePhase)">
             <summary>
@@ -10886,6 +11219,19 @@
             Resolve children
             </summary>
             <param name="phase">Resolution phase</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtType.ResolveChildren(System.Collections.Generic.List{EpicGames.UHT.Types.UhtType},EpicGames.UHT.Types.UhtResolvePhase)">
+            <summary>
+            Helper method to resolve a list of types
+            </summary>
+            <param name="children">Children to resolve</param>
+            <param name="phase">Phase of the resolve</param>
+        </member>
+        <member name="M:EpicGames.UHT.Types.UhtType.RemoveInvalidChildren">
+            <summary>
+            Remove any invalid children that were previously marked bad.  This is only
+            executed on a UhtPackage
+            </summary>
         </member>
         <member name="M:EpicGames.UHT.Types.UhtType.BindSuperAndBases">
             <summary>
@@ -11626,11 +11972,11 @@
             <param name="suffix">Suffix to be added to the file name.</param>
             <returns>Output file path</returns>
         </member>
-        <member name="M:EpicGames.UHT.Utils.IUhtExportFactory.MakePath(EpicGames.UHT.Types.UhtPackage,System.String)">
+        <member name="M:EpicGames.UHT.Utils.IUhtExportFactory.MakePath(EpicGames.UHT.Types.UhtModule,System.String)">
             <summary>
-            Make a path for an output based on the package name.
+            Make a path for an output based on the module name.
             </summary>
-            <param name="package">Package being exported</param>
+            <param name="moduleObj">Module being exported</param>
             <param name="suffix">Suffix to be added to the file name.</param>
             <returns>Output file path</returns>
         </member>
@@ -12768,11 +13114,11 @@
             <param name="suffix">Suffix/extension to be added to the file name.</param>
             <returns>Resulting file name</returns>
         </member>
-        <member name="M:EpicGames.UHT.Utils.UhtExportFactory.MakePath(EpicGames.UHT.Types.UhtPackage,System.String)">
+        <member name="M:EpicGames.UHT.Utils.UhtExportFactory.MakePath(EpicGames.UHT.Types.UhtModule,System.String)">
             <summary>
             Given a package file, generate the output file name
             </summary>
-            <param name="package">Package file</param>
+            <param name="module">Module</param>
             <param name="suffix">Suffix/extension to be added to the file name.</param>
             <returns>Resulting file name</returns>
         </member>
@@ -12993,9 +13339,9 @@
             Manifest data from the manifest file
             </summary>
         </member>
-        <member name="P:EpicGames.UHT.Utils.UhtSession.Packages">
+        <member name="P:EpicGames.UHT.Utils.UhtSession.Modules">
             <summary>
-            Collection of packages from the manifest
+            Collection of modules from the manifest
             </summary>
         </member>
         <member name="P:EpicGames.UHT.Utils.UhtSession.HeaderFiles">
@@ -13230,6 +13576,20 @@
             <param name="messageSource">Message context for when the exception doesn't contain a context.</param>
             <param name="action">The lambda to be invoked</param>
         </member>
+        <member name="M:EpicGames.UHT.Utils.UhtSession.ForEachHeader(System.Action{EpicGames.UHT.Types.UhtHeaderFile},System.Boolean)">
+            <summary>
+            Execute the given action on all the headers
+            </summary>
+            <param name="action">Action to be executed</param>
+            <param name="allowGoWide">If true, go wide if enabled.  Otherwise single threaded</param>
+        </member>
+        <member name="M:EpicGames.UHT.Utils.UhtSession.ForEachHeaderNoErrorCheck(System.Action{EpicGames.UHT.Types.UhtHeaderFile},System.Boolean)">
+            <summary>
+            Execute the given action on all the headers
+            </summary>
+            <param name="action">Action to be executed</param>
+            <param name="allowGoWide">If true, go wide if enabled.  Otherwise single threaded</param>
+        </member>
         <member name="M:EpicGames.UHT.Utils.UhtSession.ReadSource(System.String)">
             <summary>
             Read the given source file
@@ -13432,17 +13792,6 @@
             </summary>
             <param name="messageSource">Context for the exception.  Required to handled all exceptions other than UHTException</param>
             <param name="e">Exception being handled</param>
-        </member>
-        <member name="M:EpicGames.UHT.Utils.UhtSession.GetNormalizedFullFilePath(System.String)">
-            <summary>
-            Return the normalized path converted to a full path if possible. 
-            Code should NOT depend on a full path being returned.
-            
-            In general, it is assumed that during normal UHT, all paths are already full paths.
-            Only the test harness deals in relative paths.
-            </summary>
-            <param name="filePath">Path to normalize</param>
-            <returns>Normalized path possibly converted to a full path.</returns>
         </member>
         <member name="M:EpicGames.UHT.Utils.UhtSession.ValidateScriptStructOkForNet(EpicGames.UHT.Types.UhtProperty,EpicGames.UHT.Types.UhtScriptStruct)">
             <summary>
@@ -13867,6 +14216,15 @@
             Lookup the given name 
             </summary>
             <param name="owner">Matching owner.</param>
+            <param name="options">Options controlling what is search and what is returned.</param>
+            <param name="lookup">Starting lookup location.</param>
+            <returns>Found type or null if not found.</returns>
+        </member>
+        <member name="M:EpicGames.UHT.Utils.UhtSymbolTable.FindSymbolChain(EpicGames.UHT.Types.UhtHeaderFile,EpicGames.UHT.Types.UhtFindOptions,EpicGames.UHT.Utils.UhtSymbolTable.Lookup@)">
+            <summary>
+            Lookup the given name 
+            </summary>
+            <param name="header">Header file being searched.</param>
             <param name="options">Options controlling what is search and what is returned.</param>
             <param name="lookup">Starting lookup location.</param>
             <returns>Found type or null if not found.</returns>
@@ -14390,6 +14748,39 @@
             <summary>
             If not already done, switch the builder to using a StringBuilder
             </summary>
+        </member>
+        <member name="T:EpicGames.UHT.Utils.Crc">
+            <summary>
+            Helper structure used to compute UE style CRC values
+            </summary>
+        </member>
+        <member name="M:EpicGames.UHT.Utils.Crc.Compute(EpicGames.Core.StringView,System.UInt32)">
+            <summary>
+            Compute a crc from the given string and an initial CRC value
+            </summary>
+            <param name="text">Text used to generate CRC</param>
+            <param name="crc">Initial CRC values</param>
+            <returns>Compute CRC value</returns>
+        </member>
+        <member name="M:EpicGames.UHT.Utils.Crc.Compute(System.Byte[],System.UInt32)">
+            <summary>
+            Compute a crc from the given string and an initial CRC value
+            </summary>
+            <param name="text">Text used to generate CRC</param>
+            <param name="crc">Initial CRC values</param>
+            <returns>Compute CRC value</returns>
+        </member>
+        <member name="T:EpicGames.UHT.Utils.VerseNameMangling">
+            <summary>
+            Helper structure for verse name mangling
+            </summary>
+        </member>
+        <member name="M:EpicGames.UHT.Utils.VerseNameMangling.MangleCasedName(System.String)">
+            <summary>
+            If required, generate the mangled name for a cased name
+            </summary>
+            <param name="name">Name to be mangled</param>
+            <returns>True if the name needed to be mangled, false if not.</returns>
         </member>
     </members>
 </doc>

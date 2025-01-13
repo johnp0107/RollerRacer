@@ -4,14 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "CheckForPlayerOnTrack.h"
+#include "SphereTrace.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "RollerRacerPawn.generated.h"
+
 
 class UInputAction;
 class UInputMappingContext;
 class UCameraComponent;
-class USpringArmComponent;
-class USphereTrace;
-class UCheckForPlayerOnTrack;
 struct FInputActionValue;
 
 UCLASS()
@@ -31,10 +32,19 @@ public:
 	USpringArmComponent* SpringArm;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+	USpringArmComponent* PivotSpringArm;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 	UCameraComponent* Camera;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	USphereTrace* SphereTrace;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Character)
+	TObjectPtr<USceneComponent> TargetComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Character)
+	TObjectPtr<USceneComponent> MeshLocationComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UCheckForPlayerOnTrack* CheckForPlayerOnTrack;
@@ -50,12 +60,20 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float MoveForce;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float CameraHeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinCameraHeight;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	FVector ForwardMovement;	
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	bool SlowDown = false;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	FVector HitPoint;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
@@ -83,4 +101,6 @@ public:
 	UFUNCTION()
 	void AdjustCameraRoll();
 
+	UFUNCTION()
+	void SetForwardMovement();
 };

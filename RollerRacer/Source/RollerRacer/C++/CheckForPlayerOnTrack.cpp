@@ -44,7 +44,7 @@ void UCheckForPlayerOnTrack::SphereTraceToFloor()
 		UEngineTypes::ConvertToTraceType(ECC_Camera),
 		false,
 		ActorsToIgnore,
-		EDrawDebugTrace::ForDuration,
+		EDrawDebugTrace::None,
 		HitArray,
 		true,
 		FLinearColor::Gray,
@@ -59,8 +59,8 @@ void UCheckForPlayerOnTrack::SphereTraceToFloor()
 	{
 		for (const FHitResult HitResult : HitArray)
 		{
-
-			if (HitResult.GetActor()->GetName().Contains("Floor"))
+			
+			if (HitResult.GetActor()->GetName().Contains("RaceTrack"))
 			{
 				//Center = HitResult.GetComponent()->GetLocalBounds() +  SphereBounds.SphereRadius;
 				PlayerOnFloor = true;
@@ -82,8 +82,8 @@ void UCheckForPlayerOnTrack::SphereTraceToFloor()
 
 void UCheckForPlayerOnTrack::PlacePlayerBackOnFloor()
 {
-	AActor* Owner = GetOwner();
-	PlayerOnFloor = false;
-	UStaticMeshComponent* Mesh = Owner->FindComponentByClass<UStaticMeshComponent>();
-	Mesh->SetWorldLocation(Center);
+	//AActor* Owner = GetOwner();
+	//PlayerOnFloor = false;
+	//UStaticMeshComponent* Mesh = Owner->FindComponentByClass<UStaticMeshComponent>();
+	//Mesh->SetWorldLocation(Center);
 }

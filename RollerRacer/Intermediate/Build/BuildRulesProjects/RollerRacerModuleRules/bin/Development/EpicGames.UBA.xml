@@ -15,6 +15,114 @@
             </summary>
             <returns>An unmanaged handle</returns>
         </member>
+        <member name="T:EpicGames.UBA.IRootPaths">
+            <summary>
+            Base interface for root paths used by cache system to normalize paths
+            </summary>
+        </member>
+        <member name="M:EpicGames.UBA.IRootPaths.RegisterRoot(System.String,System.Boolean,System.Byte)">
+            <summary>
+            Register roots used to normalize paths in caches
+            </summary>
+            <param name="path">Path of root</param>
+            <param name="includeInKey">set this to false if you want to ignore all files under this folder (you know they are _always_ the same for all machines)</param>
+            <param name="id">Id of root. On windows these numbers need to increase two at the time since double backslash paths are added automatically under the hood</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:EpicGames.UBA.IRootPaths.RegisterSystemRoots(System.Byte)">
+            <summary>
+            Register system roots used to normalize paths in caches
+            </summary>
+            <param name="startId">Start id for system roots. On windows these take up 10 entries</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:EpicGames.UBA.IRootPaths.Create(EpicGames.UBA.ILogger)">
+            <summary>
+            Create root paths instance
+            </summary>
+        </member>
+        <member name="T:EpicGames.UBA.FetchFromCacheResult">
+            <summary>
+            Struct containing results from artifact fetch
+            </summary>
+            <param name="Success">Is set to true if succeeded in fetching artifacts</param>
+            <param name="LogLines">Contains log lines if any</param>
+        </member>
+        <member name="M:EpicGames.UBA.FetchFromCacheResult.#ctor(System.Boolean,System.Collections.Generic.List{System.String})">
+            <summary>
+            Struct containing results from artifact fetch
+            </summary>
+            <param name="Success">Is set to true if succeeded in fetching artifacts</param>
+            <param name="LogLines">Contains log lines if any</param>
+        </member>
+        <member name="P:EpicGames.UBA.FetchFromCacheResult.Success">
+            <summary>Is set to true if succeeded in fetching artifacts</summary>
+        </member>
+        <member name="P:EpicGames.UBA.FetchFromCacheResult.LogLines">
+            <summary>Contains log lines if any</summary>
+        </member>
+        <member name="T:EpicGames.UBA.ICacheClient">
+            <summary>
+            Base interface for a cache client
+            </summary>
+        </member>
+        <member name="M:EpicGames.UBA.ICacheClient.Connect(System.String,System.Int32)">
+            <summary>
+            Connect to cache client
+            </summary>
+            <param name="host">Cache server address</param>
+            <param name="port">Cache server port</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:EpicGames.UBA.ICacheClient.WriteToCache(EpicGames.UBA.IRootPaths,System.UInt32,EpicGames.UBA.IProcess,System.Byte[],System.UInt32,System.Byte[],System.UInt32)">
+            <summary>
+            Write to cache
+            </summary>
+            <param name="rootPaths">RootPath instance</param>
+            <param name="bucket">Bucket to store cache entry</param>
+            <param name="process">Process</param>
+            <param name="inputs">Input files</param>
+            <param name="inputsSize">Input files size</param>
+            <param name="outputs">Output files</param>
+            <param name="outputsSize">Output files size</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:EpicGames.UBA.ICacheClient.FetchFromCache(EpicGames.UBA.IRootPaths,System.UInt32,EpicGames.UBA.ProcessStartInfo)">
+            <summary>
+            Fetch from cache
+            </summary>
+            <param name="rootPaths">RootPath instance</param>
+            <param name="bucket">Bucket to search for cache entry</param>
+            <param name="info">Process start info</param>
+            <returns>True if successful</returns>
+        </member>
+        <member name="M:EpicGames.UBA.ICacheClient.RequestServerShutdown(System.String)">
+            <summary>
+            Request the connected server to shutdown
+            </summary>
+            <param name="reason">Reason for shutdown</param>
+        </member>
+        <member name="M:EpicGames.UBA.ICacheClient.CreateCacheClient(EpicGames.UBA.ISessionServer,System.Boolean,System.String)">
+            <summary>
+            Create a ICacheClient object
+            </summary>
+            <param name="session">The session</param>
+            <param name="reportMissReason">Output reason for cache miss to log.</param>
+            <param name="crypto">Enable crypto by using a 32 character crypto string (representing a 16 byte value)</param>
+            <returns>The ICacheClient</returns>
+        </member>
+        <member name="T:EpicGames.UBA.IConfig">
+            <summary>
+            Base interface for uba config file
+            </summary>
+        </member>
+        <member name="M:EpicGames.UBA.IConfig.LoadConfig(System.String)">
+            <summary>
+            Load a config file
+            </summary>
+            <param name="configFile">The name of the config file</param>
+            <returns>The IConfig</returns>
+        </member>
         <member name="T:EpicGames.UBA.LogEntryType">
             <summary>
             The verbosity of a log entry
@@ -67,12 +175,11 @@
             <param name="type">entry verbosity</param>
             <param name="message">the message to log</param>
         </member>
-        <member name="M:EpicGames.UBA.ILogger.CreateLogger(Microsoft.Extensions.Logging.ILogger,System.Boolean)">
+        <member name="M:EpicGames.UBA.ILogger.CreateLogger(Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Create a ILogger object
             </summary>
             <param name="logger">The Microsoft.Extensions.Logging.ILogger to wrap</param>
-            <param name="showDetail">Will log out detailed log entries from native uba to logger</param>
             <returns>The ILogger</returns>
         </member>
         <member name="M:EpicGames.UBA.ServerImpl.Dispose">
@@ -380,7 +487,12 @@
             Kill processes when close to run out of memory
             </summary>
         </member>
-        <member name="M:EpicGames.UBA.SessionServerCreateInfo.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+        <member name="P:EpicGames.UBA.SessionServerCreateInfo.StoreObjFilesCompressed">
+            <summary>
+            Store .obj files compressed on disk
+            </summary>
+        </member>
+        <member name="M:EpicGames.UBA.SessionServerCreateInfo.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             Constructor
             </summary>
@@ -393,6 +505,7 @@
             <param name="detailedTrace">More detailed trace information</param>
             <param name="allowWaitOnMem">Wait for memory before starting new processes</param>
             <param name="allowKillOnMem">Kill processes when close to run out of memory</param>
+            <param name="storeObjFilesCompressed">Store .obj files compressed on disk</param>
         </member>
         <member name="T:EpicGames.UBA.ISessionServerCreateInfo">
             <summary>
@@ -517,6 +630,24 @@
             </summary>
             <param name="id">The id returned by BeginExternalProcess</param>
             <param name="exitCode">The exit code of the external process</param>
+        </member>
+        <member name="M:EpicGames.UBA.ISessionServer.UpdateProgress(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Writes external status to the uba trace stream which can then be visualized by ubavisualizer
+            </summary>
+            <param name="processesTotal">Total processes in session</param>
+            <param name="processesDone">Processes done in session</param>
+            <param name="errorCount">Number of errors in session</param>
+        </member>
+        <member name="M:EpicGames.UBA.ISessionServer.UpdateStatus(System.UInt32,System.UInt32,System.String,EpicGames.UBA.LogEntryType,System.String)">
+            <summary>
+            Writes external status to the uba trace stream which can then be visualized by ubavisualizer
+            </summary>
+            <param name="statusRow">Row of status text. Reuse one index to show one line in visualizer</param>
+            <param name="statusColumn">The identation of status name that will be shown in visualizer</param>
+            <param name="statusText">The status text that will be shown in visualizer</param>
+            <param name="statusType">The status type</param>
+            <param name="statusLink">Optional hyperlink that can be used to make text clickable in visualizer</param>
         </member>
         <member name="M:EpicGames.UBA.ISessionServer.SetCustomCasKeyFromTrackedInputs(System.String,System.String,EpicGames.UBA.IProcess)">
             <summary>
