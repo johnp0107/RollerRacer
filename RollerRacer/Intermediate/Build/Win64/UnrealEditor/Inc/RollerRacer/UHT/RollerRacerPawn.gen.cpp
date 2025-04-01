@@ -6,261 +6,38 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "RollerRacer/C++/RollerRacerPawn.h"
-#include "EnhancedInput/Public/InputActionValue.h"
+#include "Runtime/Engine/Classes/Engine/TimerHandle.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeRollerRacerPawn() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_APawn();
+ENGINE_API UClass* Z_Construct_UClass_UAudioComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundWave_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USplineComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
-ENHANCEDINPUT_API UScriptStruct* Z_Construct_UScriptStruct_FInputActionValue();
+ROLLERRACER_API UClass* Z_Construct_UClass_ARollerRacerGameMode_NoRegister();
 ROLLERRACER_API UClass* Z_Construct_UClass_ARollerRacerPawn();
 ROLLERRACER_API UClass* Z_Construct_UClass_ARollerRacerPawn_NoRegister();
-ROLLERRACER_API UClass* Z_Construct_UClass_UCheckForPlayerOnTrack_NoRegister();
-ROLLERRACER_API UClass* Z_Construct_UClass_USphereTrace_NoRegister();
+ROLLERRACER_API UClass* Z_Construct_UClass_ASplineTrack_NoRegister();
+ROLLERRACER_API UClass* Z_Construct_UClass_UCaptureTextureSnapshot_NoRegister();
+ROLLERRACER_API UClass* Z_Construct_UClass_URaceTrackingWidget_NoRegister();
+ROLLERRACER_API UClass* Z_Construct_UClass_URacingComponent_NoRegister();
+ROLLERRACER_API UClass* Z_Construct_UClass_URollerRacerGameInstance_NoRegister();
 UPackage* Z_Construct_UPackage__Script_RollerRacer();
 // End Cross Module References
-
-// Begin Class ARollerRacerPawn Function AdjustCameraHeight
-struct Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraHeight_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARollerRacerPawn, nullptr, "AdjustCameraHeight", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraHeight_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraHeight_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraHeight()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraHeight_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(ARollerRacerPawn::execAdjustCameraHeight)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->AdjustCameraHeight();
-	P_NATIVE_END;
-}
-// End Class ARollerRacerPawn Function AdjustCameraHeight
-
-// Begin Class ARollerRacerPawn Function AdjustCameraRoll
-struct Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraRoll_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraRoll_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARollerRacerPawn, nullptr, "AdjustCameraRoll", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraRoll_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraRoll_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraRoll()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraRoll_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(ARollerRacerPawn::execAdjustCameraRoll)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->AdjustCameraRoll();
-	P_NATIVE_END;
-}
-// End Class ARollerRacerPawn Function AdjustCameraRoll
-
-// Begin Class ARollerRacerPawn Function ReleaseThrottle
-struct Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics
-{
-	struct RollerRacerPawn_eventReleaseThrottle_Parms
-	{
-		FInputActionValue Value;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Value;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RollerRacerPawn_eventReleaseThrottle_Parms, Value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) }; // 494646648
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::NewProp_Value,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARollerRacerPawn, nullptr, "ReleaseThrottle", nullptr, nullptr, Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::RollerRacerPawn_eventReleaseThrottle_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::RollerRacerPawn_eventReleaseThrottle_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(ARollerRacerPawn::execReleaseThrottle)
-{
-	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_Value);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->ReleaseThrottle(Z_Param_Out_Value);
-	P_NATIVE_END;
-}
-// End Class ARollerRacerPawn Function ReleaseThrottle
-
-// Begin Class ARollerRacerPawn Function SetForwardMovement
-struct Z_Construct_UFunction_ARollerRacerPawn_SetForwardMovement_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARollerRacerPawn_SetForwardMovement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARollerRacerPawn, nullptr, "SetForwardMovement", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_SetForwardMovement_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARollerRacerPawn_SetForwardMovement_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_ARollerRacerPawn_SetForwardMovement()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARollerRacerPawn_SetForwardMovement_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(ARollerRacerPawn::execSetForwardMovement)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->SetForwardMovement();
-	P_NATIVE_END;
-}
-// End Class ARollerRacerPawn Function SetForwardMovement
-
-// Begin Class ARollerRacerPawn Function Steering
-struct Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics
-{
-	struct RollerRacerPawn_eventSteering_Parms
-	{
-		FInputActionValue Value;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Value;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RollerRacerPawn_eventSteering_Parms, Value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) }; // 494646648
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::NewProp_Value,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARollerRacerPawn, nullptr, "Steering", nullptr, nullptr, Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::RollerRacerPawn_eventSteering_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::RollerRacerPawn_eventSteering_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_ARollerRacerPawn_Steering()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARollerRacerPawn_Steering_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(ARollerRacerPawn::execSteering)
-{
-	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_Value);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->Steering(Z_Param_Out_Value);
-	P_NATIVE_END;
-}
-// End Class ARollerRacerPawn Function Steering
-
-// Begin Class ARollerRacerPawn Function Throttle
-struct Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics
-{
-	struct RollerRacerPawn_eventThrottle_Parms
-	{
-		FInputActionValue Value;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Value;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(RollerRacerPawn_eventThrottle_Parms, Value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) }; // 494646648
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::NewProp_Value,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARollerRacerPawn, nullptr, "Throttle", nullptr, nullptr, Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::PropPointers), sizeof(Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::RollerRacerPawn_eventThrottle_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::Function_MetaDataParams), Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::RollerRacerPawn_eventThrottle_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_ARollerRacerPawn_Throttle()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ARollerRacerPawn_Throttle_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(ARollerRacerPawn::execThrottle)
-{
-	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_Value);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->Throttle(Z_Param_Out_Value);
-	P_NATIVE_END;
-}
-// End Class ARollerRacerPawn Function Throttle
 
 // Begin Class ARollerRacerPawn
 void ARollerRacerPawn::StaticRegisterNativesARollerRacerPawn()
 {
-	UClass* Class = ARollerRacerPawn::StaticClass();
-	static const FNameNativePtrPair Funcs[] = {
-		{ "AdjustCameraHeight", &ARollerRacerPawn::execAdjustCameraHeight },
-		{ "AdjustCameraRoll", &ARollerRacerPawn::execAdjustCameraRoll },
-		{ "ReleaseThrottle", &ARollerRacerPawn::execReleaseThrottle },
-		{ "SetForwardMovement", &ARollerRacerPawn::execSetForwardMovement },
-		{ "Steering", &ARollerRacerPawn::execSteering },
-		{ "Throttle", &ARollerRacerPawn::execThrottle },
-	};
-	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ARollerRacerPawn);
 UClass* Z_Construct_UClass_ARollerRacerPawn_NoRegister()
@@ -291,33 +68,13 @@ struct Z_Construct_UClass_ARollerRacerPawn_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PivotSpringArm_MetaData[] = {
-		{ "Category", "Camera" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SphereTrace_MetaData[] = {
-		{ "Category", "RollerRacerPawn" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetComponent_MetaData[] = {
-		{ "Category", "Character" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeshLocationComponent_MetaData[] = {
-		{ "Category", "Character" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CheckForPlayerOnTrack_MetaData[] = {
-		{ "Category", "RollerRacerPawn" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LevelSceneComponent_MetaData[] = {
+		{ "Category", "Camera" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
@@ -341,59 +98,115 @@ struct Z_Construct_UClass_ARollerRacerPawn_Statics
 		{ "ToolTip", "Steering Action" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveForce_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ActorLocation_MetaData[] = {
 		{ "Category", "RollerRacerPawn" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraHeight_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SplineComponent_MetaData[] = {
+		{ "Category", "RollerRacerPawn" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SplineActor_MetaData[] = {
 		{ "Category", "RollerRacerPawn" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MinCameraHeight_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RacerGameMode_MetaData[] = {
 		{ "Category", "RollerRacerPawn" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ForwardMovement_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ThreeSecondTimerHandle_MetaData[] = {
 		{ "Category", "RollerRacerPawn" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SlowDown_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DisplayGoTimerHandle_MetaData[] = {
 		{ "Category", "RollerRacerPawn" },
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HitPoint_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TotalDistanceTravelled_MetaData[] = {
 		{ "Category", "RollerRacerPawn" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Position_MetaData[] = {
+		{ "Category", "RollerRacerPawn" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ActorTextures_MetaData[] = {
+		{ "Category", "RollerRacerPawn" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WidgetClass_MetaData[] = {
+		{ "Category", "MyActor" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RacePositionWidgetInstance_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CaptureTexture_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RacingComponent_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MySoundWave_MetaData[] = {
+		{ "Category", "Audio" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WrongWayWave_MetaData[] = {
+		{ "Category", "Audio" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LevelAudio_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WrongWayAudio_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HideBackwardsDisplay_MetaData[] = {
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayerTexture_MetaData[] = {
+		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameInstance_MetaData[] = {
 		{ "ModuleRelativePath", "C++/RollerRacerPawn.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Mesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_PivotSpringArm;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_SphereTrace;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetComponent;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeshLocationComponent;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CheckForPlayerOnTrack;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_LevelSceneComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ThrottleAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SteeringAction;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_MoveForce;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_CameraHeight;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_MinCameraHeight;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_ForwardMovement;
-	static void NewProp_SlowDown_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_SlowDown;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_HitPoint;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ActorLocation;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SplineComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SplineActor;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RacerGameMode;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ThreeSecondTimerHandle;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_DisplayGoTimerHandle;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_TotalDistanceTravelled;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Position;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ActorTextures_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_ActorTextures;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_WidgetClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RacePositionWidgetInstance;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CaptureTexture;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RacingComponent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MySoundWave;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WrongWayWave;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_LevelAudio;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WrongWayAudio;
+	static void NewProp_HideBackwardsDisplay_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_HideBackwardsDisplay;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerTexture;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_GameInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
-	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraHeight, "AdjustCameraHeight" }, // 3462439477
-		{ &Z_Construct_UFunction_ARollerRacerPawn_AdjustCameraRoll, "AdjustCameraRoll" }, // 1655334251
-		{ &Z_Construct_UFunction_ARollerRacerPawn_ReleaseThrottle, "ReleaseThrottle" }, // 801782852
-		{ &Z_Construct_UFunction_ARollerRacerPawn_SetForwardMovement, "SetForwardMovement" }, // 3406211085
-		{ &Z_Construct_UFunction_ARollerRacerPawn_Steering, "Steering" }, // 2120729216
-		{ &Z_Construct_UFunction_ARollerRacerPawn_Throttle, "Throttle" }, // 528557765
-	};
-	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARollerRacerPawn>::IsAbstract,
 	};
@@ -401,41 +214,63 @@ struct Z_Construct_UClass_ARollerRacerPawn_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mesh_MetaData), NewProp_Mesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpringArm_MetaData), NewProp_SpringArm_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_PivotSpringArm = { "PivotSpringArm", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, PivotSpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PivotSpringArm_MetaData), NewProp_PivotSpringArm_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Camera_MetaData), NewProp_Camera_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SphereTrace = { "SphereTrace", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, SphereTrace), Z_Construct_UClass_USphereTrace_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SphereTrace_MetaData), NewProp_SphereTrace_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_TargetComponent = { "TargetComponent", nullptr, (EPropertyFlags)0x01140000000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, TargetComponent), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetComponent_MetaData), NewProp_TargetComponent_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MeshLocationComponent = { "MeshLocationComponent", nullptr, (EPropertyFlags)0x01140000000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, MeshLocationComponent), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeshLocationComponent_MetaData), NewProp_MeshLocationComponent_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_CheckForPlayerOnTrack = { "CheckForPlayerOnTrack", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, CheckForPlayerOnTrack), Z_Construct_UClass_UCheckForPlayerOnTrack_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CheckForPlayerOnTrack_MetaData), NewProp_CheckForPlayerOnTrack_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_LevelSceneComponent = { "LevelSceneComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, LevelSceneComponent), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelSceneComponent_MetaData), NewProp_LevelSceneComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ThrottleAction = { "ThrottleAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, ThrottleAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ThrottleAction_MetaData), NewProp_ThrottleAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SteeringAction = { "SteeringAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, SteeringAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SteeringAction_MetaData), NewProp_SteeringAction_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MoveForce = { "MoveForce", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, MoveForce), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveForce_MetaData), NewProp_MoveForce_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_CameraHeight = { "CameraHeight", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, CameraHeight), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraHeight_MetaData), NewProp_CameraHeight_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MinCameraHeight = { "MinCameraHeight", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, MinCameraHeight), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MinCameraHeight_MetaData), NewProp_MinCameraHeight_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ForwardMovement = { "ForwardMovement", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, ForwardMovement), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ForwardMovement_MetaData), NewProp_ForwardMovement_MetaData) };
-void Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SlowDown_SetBit(void* Obj)
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ActorLocation = { "ActorLocation", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, ActorLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorLocation_MetaData), NewProp_ActorLocation_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SplineComponent = { "SplineComponent", nullptr, (EPropertyFlags)0x00100000000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, SplineComponent), Z_Construct_UClass_USplineComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SplineComponent_MetaData), NewProp_SplineComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SplineActor = { "SplineActor", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, SplineActor), Z_Construct_UClass_ASplineTrack_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SplineActor_MetaData), NewProp_SplineActor_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_RacerGameMode = { "RacerGameMode", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, RacerGameMode), Z_Construct_UClass_ARollerRacerGameMode_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RacerGameMode_MetaData), NewProp_RacerGameMode_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ThreeSecondTimerHandle = { "ThreeSecondTimerHandle", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, ThreeSecondTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ThreeSecondTimerHandle_MetaData), NewProp_ThreeSecondTimerHandle_MetaData) }; // 756291145
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_DisplayGoTimerHandle = { "DisplayGoTimerHandle", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, DisplayGoTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DisplayGoTimerHandle_MetaData), NewProp_DisplayGoTimerHandle_MetaData) }; // 756291145
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_TotalDistanceTravelled = { "TotalDistanceTravelled", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, TotalDistanceTravelled), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TotalDistanceTravelled_MetaData), NewProp_TotalDistanceTravelled_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_Position = { "Position", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, Position), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Position_MetaData), NewProp_Position_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ActorTextures_Inner = { "ActorTextures", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ActorTextures = { "ActorTextures", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, ActorTextures), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActorTextures_MetaData), NewProp_ActorTextures_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_WidgetClass = { "WidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, WidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_URaceTrackingWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WidgetClass_MetaData), NewProp_WidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_RacePositionWidgetInstance = { "RacePositionWidgetInstance", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, RacePositionWidgetInstance), Z_Construct_UClass_URaceTrackingWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RacePositionWidgetInstance_MetaData), NewProp_RacePositionWidgetInstance_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_CaptureTexture = { "CaptureTexture", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, CaptureTexture), Z_Construct_UClass_UCaptureTextureSnapshot_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CaptureTexture_MetaData), NewProp_CaptureTexture_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_RacingComponent = { "RacingComponent", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, RacingComponent), Z_Construct_UClass_URacingComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RacingComponent_MetaData), NewProp_RacingComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MySoundWave = { "MySoundWave", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, MySoundWave), Z_Construct_UClass_USoundWave_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MySoundWave_MetaData), NewProp_MySoundWave_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_WrongWayWave = { "WrongWayWave", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, WrongWayWave), Z_Construct_UClass_USoundWave_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WrongWayWave_MetaData), NewProp_WrongWayWave_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_LevelAudio = { "LevelAudio", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, LevelAudio), Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LevelAudio_MetaData), NewProp_LevelAudio_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_WrongWayAudio = { "WrongWayAudio", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, WrongWayAudio), Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WrongWayAudio_MetaData), NewProp_WrongWayAudio_MetaData) };
+void Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_HideBackwardsDisplay_SetBit(void* Obj)
 {
-	((ARollerRacerPawn*)Obj)->SlowDown = 1;
+	((ARollerRacerPawn*)Obj)->HideBackwardsDisplay = 1;
 }
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SlowDown = { "SlowDown", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ARollerRacerPawn), &Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SlowDown_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlowDown_MetaData), NewProp_SlowDown_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_HitPoint = { "HitPoint", nullptr, (EPropertyFlags)0x0010000000020005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, HitPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitPoint_MetaData), NewProp_HitPoint_MetaData) };
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_HideBackwardsDisplay = { "HideBackwardsDisplay", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ARollerRacerPawn), &Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_HideBackwardsDisplay_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HideBackwardsDisplay_MetaData), NewProp_HideBackwardsDisplay_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_PlayerTexture = { "PlayerTexture", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, PlayerTexture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerTexture_MetaData), NewProp_PlayerTexture_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_GameInstance = { "GameInstance", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARollerRacerPawn, GameInstance), Z_Construct_UClass_URollerRacerGameInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameInstance_MetaData), NewProp_GameInstance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARollerRacerPawn_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_Mesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SpringArm,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_PivotSpringArm,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_Camera,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SphereTrace,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_TargetComponent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MeshLocationComponent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_CheckForPlayerOnTrack,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_LevelSceneComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ThrottleAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SteeringAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MoveForce,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_CameraHeight,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MinCameraHeight,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ForwardMovement,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SlowDown,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_HitPoint,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ActorLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SplineComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_SplineActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_RacerGameMode,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ThreeSecondTimerHandle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_DisplayGoTimerHandle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_TotalDistanceTravelled,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_Position,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ActorTextures_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_ActorTextures,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_WidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_RacePositionWidgetInstance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_CaptureTexture,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_RacingComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_MySoundWave,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_WrongWayWave,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_LevelAudio,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_WrongWayAudio,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_HideBackwardsDisplay,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_PlayerTexture,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARollerRacerPawn_Statics::NewProp_GameInstance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARollerRacerPawn_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ARollerRacerPawn_Statics::DependentSingletons[])() = {
@@ -448,11 +283,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ARollerRacerPawn_Static
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	FuncInfo,
+	nullptr,
 	Z_Construct_UClass_ARollerRacerPawn_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	UE_ARRAY_COUNT(FuncInfo),
+	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_ARollerRacerPawn_Statics::PropPointers),
 	0,
 	0x009000A4u,
@@ -478,10 +313,10 @@ ARollerRacerPawn::~ARollerRacerPawn() {}
 struct Z_CompiledInDeferFile_FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARollerRacerPawn, ARollerRacerPawn::StaticClass, TEXT("ARollerRacerPawn"), &Z_Registration_Info_UClass_ARollerRacerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARollerRacerPawn), 522137100U) },
+		{ Z_Construct_UClass_ARollerRacerPawn, ARollerRacerPawn::StaticClass, TEXT("ARollerRacerPawn"), &Z_Registration_Info_UClass_ARollerRacerPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARollerRacerPawn), 403091945U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_258261300(TEXT("/Script/RollerRacer"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_3646389855(TEXT("/Script/RollerRacer"),
 	Z_CompiledInDeferFile_FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

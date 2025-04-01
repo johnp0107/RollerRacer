@@ -9,22 +9,12 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FInputActionValue;
 #ifdef ROLLERRACER_RollerRacerPawn_generated_h
 #error "RollerRacerPawn.generated.h already included, missing '#pragma once' in RollerRacerPawn.h"
 #endif
 #define ROLLERRACER_RollerRacerPawn_generated_h
 
-#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execSetForwardMovement); \
-	DECLARE_FUNCTION(execAdjustCameraRoll); \
-	DECLARE_FUNCTION(execAdjustCameraHeight); \
-	DECLARE_FUNCTION(execSteering); \
-	DECLARE_FUNCTION(execReleaseThrottle); \
-	DECLARE_FUNCTION(execThrottle);
-
-
-#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_21_INCLASS_NO_PURE_DECLS \
+#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_30_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARollerRacerPawn(); \
 	friend struct Z_Construct_UClass_ARollerRacerPawn_Statics; \
@@ -33,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ARollerRacerPawn)
 
 
-#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_21_ENHANCED_CONSTRUCTORS \
+#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ARollerRacerPawn(ARollerRacerPawn&&); \
@@ -45,13 +35,12 @@ public: \
 	NO_API virtual ~ARollerRacerPawn();
 
 
-#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_18_PROLOG
-#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_21_GENERATED_BODY \
+#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_27_PROLOG
+#define FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_30_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_21_INCLASS_NO_PURE_DECLS \
-	FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_21_ENHANCED_CONSTRUCTORS \
+	FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_30_INCLASS_NO_PURE_DECLS \
+	FID_Users_johnp_Documents_GitHub_RollerRacer_RollerRacer_Source_RollerRacer_C___RollerRacerPawn_h_30_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

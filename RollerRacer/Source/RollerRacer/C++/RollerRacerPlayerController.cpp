@@ -26,12 +26,6 @@ void ARollerRacerPlayerController::SetupInputComponent()
 void ARollerRacerPlayerController::Tick(float Delta)
 {
 	Super::Tick(Delta);
-
-	//if (IsValid(VehiclePawn) && IsValid(VehicleUI))
-	//{
-	//	//VehicleUI->UpdateSpeed(VehiclePawn->GetChaosVehicleMovement()->GetForwardSpeed());
-	//	//VehicleUI->UpdateGear(VehiclePawn->GetChaosVehicleMovement()->GetCurrentGear());
-	//}
 }
 
 void ARollerRacerPlayerController::OnPossess(APawn* InPawn)
