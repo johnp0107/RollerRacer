@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RollerRacerModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0158e2de4538ef0f184e98cad31140e61e792725")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f625722ba773310666944ceb77f08f26b612c8d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("RollerRacerModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RollerRacerModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
